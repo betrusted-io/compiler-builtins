@@ -60,7 +60,7 @@ fn main() {
         // * riscv - the rust-lang/rust distribution container doesn't have a C
         //   compiler nor is cc-rs ready for compilation to riscv (at this
         //   time). This can probably be removed in the future
-        if !target.contains("wasm") && !target.contains("nvptx") && !target.starts_with("riscv") {
+        if !target.contains("wasm") && !target.contains("nvptx") {
             #[cfg(feature = "c")]
             c::compile(&llvm_target, &target);
         }
