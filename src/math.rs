@@ -94,6 +94,12 @@ no_mangle! {
     fn tanf(n: f32) -> f32;
 }
 
+#[cfg(target_os = "xous")]
+no_mangle! {
+    fn sqrtf(x: f32) -> f32;
+    fn sqrt(x: f64) -> f64;
+}
+
 #[cfg(all(target_vendor = "fortanix", target_env = "sgx"))]
 no_mangle! {
     fn ceil(x: f64) -> f64;
