@@ -71,6 +71,7 @@ no_mangle! {
         target_os = "unknown",
         not(target_env = "wasi")
     ),
+    target_os = "xous",
     all(target_arch = "xtensa", target_os = "none"),
     all(target_vendor = "fortanix", target_env = "sgx")
 ))]
