@@ -101,7 +101,7 @@ no_mangle! {
     fn sqrt(x: f64) -> f64;
 }
 
-#[cfg(all(target_vendor = "fortanix", target_env = "sgx"))]
+#[cfg(any(all(target_vendor = "fortanix", target_env = "sgx"), target_os = "xous"))]
 no_mangle! {
     fn ceil(x: f64) -> f64;
     fn ceilf(x: f32) -> f32;
